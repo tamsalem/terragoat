@@ -1,24 +1,12 @@
 version: 2.1
 orbs:
-  bridgecrew: bridgecrew/bridgecrew@1.0.3
+  bridgecrew: bridgecrew/bridgecrew@1.0.4
 jobs:
-  bridgecrew-commands:
-    environment:
-      BC_API_KEY: 5dd9ff67-4f40-4766-b5bb-9656bbfee39e
+  build:
     executor: bridgecrew/default
     steps:
       - checkout
-      - bridgecrew/install
       - bridgecrew/scan:
-          directory: "./terraform"
-          api-key-variable: BC_API_KEY
-#           prisma-api-url-variable: PRISMA_API_URL
-          soft-fail: true
-          output: json
-workflows:
-  bridgecrew-scan:
-    jobs:
-      - bridgecrew/bridgecrew_scan:
-          directory: "./terraform"
-          api-key-variable: BC_API_KEY
-      - bridgecrew-commands
+          directory: ./terraform
+          api-key-variable: BC_API_KEY 
+          prisma-api-url: https://api-stage.prismacloud.io
