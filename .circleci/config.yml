@@ -7,6 +7,6 @@ jobs:
     steps:
       - checkout
       - bridgecrew/scan:
-          directory: ./terraform
+          directory: .
           api-key-variable: BC_API_KEY 
           prisma-api-url: https://api-stage.prismacloud.io
