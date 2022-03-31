@@ -15,6 +15,7 @@ jobs:
       - bridgecrew/scan:
           directory: .
           api-key-variable: BC_API_KEY
+#           
 # version: 2.1
 # orbs:
 #   bridgecrew: bridgecrew/bridgecrew@1.0.3
