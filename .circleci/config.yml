@@ -1,6 +1,8 @@
 version: 2.1
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
+environment:
+  PRISMA_API_URL: https://api-stage.prismacloud.io
 jobs:
   build:
     executor: bridgecrew/default
@@ -8,5 +10,4 @@ jobs:
       - checkout
       - bridgecrew/scan:
           directory: .
-          api-key-variable: BC_API_KEY 
-          prisma-api-url: https://api-stage.prismacloud.io
+          api-key-variable: BC_API_KEY
