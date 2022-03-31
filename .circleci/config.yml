@@ -9,6 +9,7 @@ jobs:
     executor: bridgecrew/default
     environment:
       PRISMA_API_URL: https://api-stage.prismacloud.io
+      LOG_LEVEL: DEBUG
     steps:
       - checkout
       - bridgecrew/scan:
