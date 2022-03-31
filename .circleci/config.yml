@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
-environment:
-  PRISMA_API_URL: https://api-stage.prismacloud.io
+bridgecrew-commands:
+  environment:
+    PRISMA_API_URL: https://api-stage.prismacloud.io
 jobs:
   build:
     executor: bridgecrew/default
